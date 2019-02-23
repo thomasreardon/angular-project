@@ -1,0 +1,20 @@
+<div><ol><li><a href="reimbursements-list">Back</a></li> </ol></div>
+<div>
+      <input type = "text" name="amount" id="amount" [(ngModel)]="erAmount" placeholder="Reimbursement Amount">
+</div>
+<div>
+    <select name="type" id="type" [(ngModel)]="reimbTypeId">
+      <option value="" disabled selected>Type of Reimbursement</option>
+      <option value="1">Lodging</option>
+      <option value="0">Travel</option>
+      <option value="2">Food</option>
+      <option value="3">Other</option>
+    </select>
+</div>
+<div>
+      <textarea name="description" id="description" [(ngModel)]="erDescription" placeholder="Description" rows="4" cols="50"></textarea>
+</div>
+<div>
+  <button (click)="addReimb()">Submit</button>
+</div>
+  

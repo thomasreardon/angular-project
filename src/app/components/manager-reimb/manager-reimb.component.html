@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<div>
+    <ol>  
+        <li><a href="add-Reimb">Add Reimbursement</a></li> 
+        <li><a href="reimbursements-list">Back</a></li> 
+    </ol>
+</div>
+<div class="container">
+        <table class="table table-bordered table-hover" *ngIf="reimbursements">
+          <th>Amount</th>
+          <th>Date Submitted</th>
+          <th>Date Resolved</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Type</th>
+          
+          <tr *ngFor="let reimb of reimbursements">
+          <td>{{reimb.erAmount}}</td> 
+          <td>{{reimb.erSubmitted | date: 'dd/MM/yyyy'}}</td>  
+          <td>{{reimb.erResolved | date: 'dd/MM/yyyy'}}</td>  
+          <td>{{reimb.erDescription}}</td> 
+          <td>{{reimb.reimbStatusId | statusPipe}}</td>  
+          <td>{{reimb.reimbTypeId | pipeType}}</td>    
+          </tr>
+            </table>
+      </div>
+    
+

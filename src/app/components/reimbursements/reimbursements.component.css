@@ -1,0 +1,16 @@
+.navbar-nav {
+    list-style: none;
+    
+}
+
+li {
+    margin-top: 13px;
+    font-size: 17px;
+    display: inline;
+    margin-right: 40px;
+}
+
+.myBtn {
+    border-radius: 12px;
+      
+}
